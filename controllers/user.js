@@ -1,18 +1,23 @@
 class UserController {
-    
-    register(req, res) {
-
+  async register(req, res) {
+    if (req.method == "POST") {
+        return;
     }
-    
-    
-    login(req, res) {
-        
-        if (req.method == "POST") {
-            return
-        }
+  
+    res.render("register.hbs");
+  }
 
-        res.render("login.hbs")
+  async login(req, res) {
+    if (req.method == "POST") {
+      return;
     }
+
+    res.render("login.hbs");
+  }
+
+  async dashboard(req, res) {
+    return res.render("dashboard.hbs", {});
+  }
 }
 
-module.exports = UserController
+module.exports = UserController;

@@ -6,8 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('express-hbs')
 
-const {indexRouter, usersRouter} = require('./routes');
-
+const router = require('./routes');
 const sequelize = require('./sequelize');
 
 var app = express();
@@ -27,8 +26,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter)
-app.use('/users', usersRouter);
-
+app.use('/', router)
 
 module.exports = app;

@@ -1,0 +1,191 @@
+{{!< base }}
+
+{{#contentFor "title"}} Dashboard {{/contentFor}}
+
+<main class="col-md-12 dashboard-container">
+  <div class="row large-container">
+    <div class="col-md-2 left-content">
+      <div class="col-md-12 header">
+        <!-- <div><img src="/public/images/logo2.png"></div> -->
+        <div><h2>bitBybit</h2></div>
+      </div>
+      <div class="col-md-12">
+        <img class="img" src="/public/images/samantha.png" alt="myPics" /><br /><br />
+        <span>
+          <h5><strong>Samantha</strong></h5>
+          <small>samantha@gmail.com</small>
+        </span>
+      </div>
+      <div class="col-md-12 dashboard">
+        <h5><strong>Dashboard</strong></h5>
+        <ul>
+          <li><i class="fas fa-wallet"></i>&nbsp; Payments</li>
+          <li><i class="fas fa-share"></i>&nbsp; Summary</li>
+          <li><i class="fas fa-user"></i>&nbsp; Profile</li>
+          <li><i id="roller" class="fas fa-cog"></i>&nbsp; Settings</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-6 col-lg-8 inner-dash text-center">
+      <div class="col-md-9 text-left">
+        <div class="search-bar text-center">
+          <i id="searchIcon" class="fas fa-search"></i>
+          <input class="mySearch" type="search" placeholder="Search" /><br />
+          <div class="row myMonth">
+            <div class="col-md-6">
+              <div>
+                <h4>This month</h4><br />
+                <p class="date">01-25 December, 2021</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="dropdown">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Create Payments
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Pay Someone</a>
+                  <a class="dropdown-item" href="#">Receieve Payment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 text-center date">
+            <img src="/public/images/dashboard  bar.png" width="80%" />
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-12 text-center dueDate">
+              <p>Due date</p>
+              <i class="fas fa-ellipsis-h" style="color: grey;"></i>
+            </div>
+            <div class="col-md-12 first-item">
+              <div class="items1">
+                <i class="fas fa-store"></i>
+                <div class="items_1">
+                  <h6>Adupe's Kitchen</h6>
+                  <span>Five course meal</span>
+                </div>
+              </div>
+              <div id="myText">
+                <p class="imgThumb">#1500
+                  <span><input type="button" value="Make Payment" /></span>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-12 first-item">
+              <div class="items2">
+                <i class="fas fa-bus"></i>
+                <div class="items_1">
+                  <h6>Adeola Tinu</h6>
+                  <span>Peruvian hair</span>
+                </div>
+              </div>
+              <div id="myText">
+                <p class="imgThumb">#1500
+                  <span><input type="button" value="Make Payment" /></span>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-12 first-item">
+              <div class="items3">
+                <i class="fas fa-home"></i>
+                <div class="items_1">
+                  <h6>Elumelu R.estate</h6>
+                  <span>Initial deposit</span>
+                </div>
+              </div>
+              <div id="myText">
+                <p class="imgThumb">#1500
+                  <span><input type="button" value="Make Payment" /></span>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-12 text-center dueDate">
+              <p>Due date</p>
+              <i class="fas fa-ellipsis-h" style="color: grey;"></i>
+            </div>
+            <div class="col-md-12 first-item">
+              <div class="items4">
+                <i class="fas fa-home"></i>
+                <div class="items_1">
+                  <h6>Adupe's Kitchen</h6>
+                  <p>Five course meal</p>
+                </div>
+              </div>
+              <div id="myText">
+                <p class="imgThumb">#1500
+                  <span><input type="button" value="Make Payment" /></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-2 expenditure">
+      <h5><b>Expenditure</b></h5>
+      <div class="col-md-12 progress-title">
+        <p><b>Electronics</b></p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 50%; background: #8AC926;">
+            <div class="progress-value">50%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 progress-title">
+        <p><b>Home appliances</b></p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 85%; background: #8AC926;">
+            <div class="progress-value">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 progress-title">
+        <p><b>Housing</b></p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 60%; background: #8AC926;">
+            <div class="progress-value">60%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 progress-title">
+        <p><b>Loans</b></p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 75%; background: #8AC926;">
+            <div class="progress-value">35%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 progress-title">
+        <p><b>Vehicle</b></p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 95%; background: #8AC926;">
+            <div class="progress-value">95%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="imgRight text-center">
+          <img src="/public/images/boxes.png" />
+          <img src="/public/images/plant.png" />
+        </div>
+        <div class="col-md-12 tips-container">
+          <p class="tip-text">
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim.<br /><br />
+            <button class="tip">View Tips</button>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

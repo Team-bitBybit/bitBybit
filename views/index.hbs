@@ -9,16 +9,24 @@
             <p>
                 bitBybit helps over 30 million millenials achieve their
                 financial goals by helping them buy now and pay later.<br>
-                <button>Create free account</button>
+                <button onclick="signup()">Create free account</button>
             </p>
         </div>
         <div class="col-md-6">
-            <img src="public/images/titleImg.png" width="100%" height="100%">
+            <img src="/public/images/titleImg.png" width="100%" height="100%">
         </div>
         <div class="midImg">
-            <img src="public/images/GreyLayer.png" width="50%">
-            <img src="public/images/Rectangle 44.png" width="100%">
-            <img src="public/images/BlackLayer.png" width="50%">
+            <img src="/public/images/GreyLayer.png" width="50%">
+            <img src="/public/images/Rectangle 44.png" width="100%">
+            <img src="/public/images/BlackLayer.png" width="50%">
         </div>
     </div>
 </main>
+
+{{#contentFor "scripts"}}
+<script>
+    function signup() {
+        window.location.href='/accounts/register'
+    }
+</script>
+{{/contentFor}}

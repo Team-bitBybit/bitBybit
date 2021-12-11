@@ -1,17 +1,19 @@
 {{!< base }}
 
-{{#contentFor "title" }} Login {{/contentFor}}
+{{#contentFor "title" }} Sign Up {{/contentFor}}
 
 <main>
     <div class="row first-row">
         <div class="col-md-6 first-container">
-            <h1>Welcome!</h1>
+            <h1>Let's get you signed up!</h1>
             <form id="myForm" method="post">
+                <input type="text" name="name" id="name" placeholder="Enter Full name"><br>    
                 <input type="email" name="email" id="email" placeholder="Enter email"><br>
                 <input type="password" name="password" id="password" placeholder="Enter password"><br>
-                <p><button>Log in</button></p>
+                <input type="password" name="password2" id="password2" placeholder="Re-enter password">
+                <p><button>Sign Up</button></p>
             </form>
-            <small> Don't have an account? <a href="/accounts/register">Sign up</a> now!</small>
+            <small> Already have an account? <a href="/accounts/login">Log in instead</a></small>
         </div>
         <div class="col-md-6">
             <img src="/public/images/sign_in.png" width="100%" height="100%">

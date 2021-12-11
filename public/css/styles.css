@@ -45,7 +45,7 @@ nav .mainMenu{
   transition: all .8 ease-in;
   transform: translateY(-3px);
 }
-button{
+button, .button {
   padding: 0.5em !important;
   text-align: center;
   border: none;
@@ -53,7 +53,7 @@ button{
   border-radius: 8px;
   font-weight: 500;
 }
-button:hover{
+button:hover, .button:hover {
   transform: translateX(5px);
   background: rgb(139, 209, 139);
   color: rgb(95, 93, 93);
@@ -95,11 +95,11 @@ nav .logo{
       background-color: #ffffff;
       box-shadow: 2px 4px 4px 4px #fdfffb;
   }
-  button{
+  button, .button{
       text-align: center;
       margin: 10px;
   }
-  .buttons{
+  .buttons, .buttons {
       display: flex;
       flex-direction: row;
   }
