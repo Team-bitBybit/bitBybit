@@ -1,23 +1,48 @@
 {{!< base }}
 
-{{#contentFor "title" }} Login {{/contentFor}}
+{{#contentFor "title"}} Login {{/contentFor}}
 
 <main>
-    <div class="row first-row">
-        <div class="col-md-6 first-container">
-            <h1>Welcome!</h1>
-            <form id="myForm" method="post">
-                <input type="email" name="email" id="email" placeholder="Enter email"><br>
-                <input type="password" name="password" id="password" placeholder="Enter password"><br>
-                <p><button>Log in</button></p>
-            </form>
-            <small> Don't have an account? <a href="/accounts/register">Sign up</a> now!</small>
-        </div>
-        <div class="col-md-6">
-            <img src="/public/images/sign_in.png" width="100%" height="100%">
-        </div>
-        <!-- <div class="midImg">
-        <img src="/images/GreyLayer.png" width="100%"><br>
-        <img src="/images/BlackLayer.png" width="100%"> -->     
+  <div class="row signUpCon">
+    <div class="col-md-12 text-center">
+      <div class="signLogo text-center">
+        <img src="/public/images/logo2.png" />
+        <h3 style="color: white;">&nbsp;bitBybit</h3>
+      </div>
     </div>
+    <div class="col-md-12 text-center signIn">
+      <h3>Welcome</h3><br />
+      <p>Sign in to enjoy buying now and paying later.</p>
+      <form id="myForm" method="post">
+        <div class="form-group">
+          <input
+            class="shadow"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email address"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            class="shadow"
+            id="id_password"
+            type="password"
+            placeholder="Enter password"
+            name="password"
+            required
+          />
+          <i id="eyes" class="fas fa-eye"></i>
+        </div>
+        <div><button class="shadow">Log in</button></div>
+      </form>
+      <small>
+        Don't have an account?
+        <a href="/accounts/register">Sign up</a>
+        now!
+      </small>
+    </div>
+  </div>
 </main>

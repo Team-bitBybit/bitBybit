@@ -1,32 +1,30 @@
 {{!< base }}
 
-{{#contentFor "title"}} bitByBit{{/contentFor }}
+{{#contentFor "title"}} bitByBit{{/contentFor}}
 
 <main>
-    <div class="row first-row">
-        <div class="col-md-6 first-container">
-            <h1>The better way to</h1>
-            <p>
-                bitBybit helps over 30 million millenials achieve their
-                financial goals by helping them buy now and pay later.<br>
-                <button onclick="signup()">Create free account</button>
-            </p>
-        </div>
-        <div class="col-md-6">
-            <img src="/public/images/titleImg.png" width="100%" height="100%">
-        </div>
-        <div class="midImg">
-            <img src="/public/images/GreyLayer.png" width="50%">
-            <img src="/public/images/Rectangle 44.png" width="100%">
-            <img src="/public/images/BlackLayer.png" width="50%">
-        </div>
+  <div class="row first-row">
+    <div class="col-md-6 first-container">
+      <h1>The better way to</h1>
+      <p>
+        bitBybit helps over 30 million millenials achieve their financial goals
+        by helping them buy now and pay later.<br />
+        <button class="shadow" onclick="signup()">Create free account</button>
+      </p>
     </div>
+    <div class="col-md-6">
+      <img src="/public/images/titleImg.png" width="100%" height="100%" />
+    </div>
+    <div class="midImg">
+      <img src="/public/images/GreyLayer.png" width="50%" />
+      <img src="/public/images/Rectangle 44.png" width="100%" />
+      <img src="/public/images/BlackLayer.png" width="50%" />
+    </div>
+  </div>
 </main>
 
 {{#contentFor "scripts"}}
-<script>
-    function signup() {
-        window.location.href='/accounts/register'
-    }
-</script>
+  <script>
+    function signup() { window.location.href='/accounts/register' }
+  </script>
 {{/contentFor}}

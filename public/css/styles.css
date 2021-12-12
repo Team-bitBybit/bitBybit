@@ -4,6 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   transition: .3s;
+  scrollbar-width:20px;
 }
 :root{
   --green-color: #8AC926;
@@ -45,7 +46,7 @@ nav .mainMenu{
   transition: all .8 ease-in;
   transform: translateY(-3px);
 }
-button, .button {
+button{
   padding: 0.5em !important;
   text-align: center;
   border: none;
@@ -53,7 +54,7 @@ button, .button {
   border-radius: 8px;
   font-weight: 500;
 }
-button:hover, .button:hover {
+button:hover{
   transform: translateX(5px);
   background: rgb(139, 209, 139);
   color: rgb(95, 93, 93);
@@ -86,6 +87,19 @@ nav .logo{
   border: 1px rgb(255, 255, 255) solid;
   border-radius: 5px;
 }
+.large-container{
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width:365px)and(max-width:768px) {
+  .expenditure{
+      margin-top: -300px;
+  }    
+  #eyes{
+      position:relative;
+      right: 100px !important;
+  }
+}
 @media (max-width:800px){
   .logo img{
       height: 35px;
@@ -95,11 +109,11 @@ nav .logo{
       background-color: #ffffff;
       box-shadow: 2px 4px 4px 4px #fdfffb;
   }
-  button, .button{
+  button{
       text-align: center;
       margin: 10px;
   }
-  .buttons, .buttons {
+  .buttons{
       display: flex;
       flex-direction: row;
   }
@@ -143,7 +157,11 @@ nav .logo{
       right: 10px;
       top: -15px;
   }
-  
+  .itemsIcons{
+      display: inline-flex;
+      width: 100% !important;
+      
+  }   
   nav .mainMenu li a:hover{
       color: var(--green-color);
       background: none;
@@ -152,13 +170,38 @@ nav .logo{
   .first-container p, h1{
       text-align: center;
   }
+  .expenditure{
+      background: #F9FAFC;
+      color: black;
+      position: absolute;
+      top: 400px;
+      left: 0 !important;
+      line-height: 30px; 
+      padding-top: 30px;
+  }
+  .dashboard-container{
+      background: none !important;
+  }
+  .inner-dash{
+      background: #fff !important;
+      color: black;
+      border-radius: 0 !important;
+      padding-left: 40px;
+  }
+  .tip-text{
+      text-align: center;
+  }
+  .left-content{
+      display:none;
+      background: #fff;
+  }
+  .expenditure{
+      position: relative;
+      left: 500px;
+  }
 
 }
 @media screen and (max-width:540px){
-  .first-row{
-      display: flex;
-      flex-direction: column-reverse;
-  }
   .first-container p{
       font-size: 20px !important;
   }
@@ -170,6 +213,59 @@ nav .logo{
   }
   .first-container input{
       width: 100%;
+  }
+  #eyes{
+      position:absolute;
+      margin-top: -40px;
+      margin-left:25vw !important;
+      color: grey;
+      font-size: 18px;
+  }
+  .numNotify{
+      border-radius: 50px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--green-color);
+      color: white;
+  }
+  .expenditure{
+      background: #F9FAFC;
+      color: black;
+      position: relative;
+      left: 0 !important;
+      line-height: 30px; 
+      padding-top: 30px;
+      margin-top: -300px;
+  }
+  .dashboard-container{
+      background: none !important;
+  }
+  .inner-dash{
+      background: #fff !important;
+      color: black;
+      padding: 1em;
+      text-align: center;
+      border-radius: 0 !important;
+  }
+  .tip-text{
+      text-align: center;
+  }
+  .left-content{
+      display:none;
+      background: #fff;
+  }
+  .items_1{
+      font-size: 15px !important;
+      width: 180px;
+  }
+  .items1 i,
+  .items2 i,
+  .items3 i, 
+  .items4 i{
+      padding: 0.6em !important;
+  }
+  .inner-dash-contents{
+      overflow-x: auto;
   }
 }
 h1{
@@ -198,20 +294,28 @@ h1{
 
 input{
   margin: 5px;
-  padding: 0.6em !important;
-  font-size: 18px;
+  padding: 1em !important;
+  font-size: 14px;
   border-radius: 10px;
   outline: none !important;
   border: none !important;
   background: #edffdb;
-  width: 80%;
+  width: 100%;
 }
 input:hover{
   outline: none !important;
 }
 /******* Dashboard Designs*******/
+.first-nav{
+  display: none;
+}
+.large-container{
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
 .dashboard-container{
-  padding: 2em;
+  padding: 0.5em;
   background: black;
   color: white;
   height: 100vh;
@@ -221,6 +325,10 @@ input:hover{
   color: black;
   border-radius: 20px;
   height: 92vh;
+  margin: 0 !important;
+  overflow-y: auto;
+  overflow-wrap: normal;
+  
 }
 .img{
   border-radius: 20px;
@@ -235,14 +343,17 @@ input:hover{
 }
 .dashboard{
   line-height: 45px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .left-content{
   text-align: left;
   justify-content: center;
   align-items: center;
-  padding-right: 4em;
-  padding-left: 4em;
+  padding-top: 10px;
+  padding-right: 1em;
+  padding-left: 1em;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 #roller{
   animation: spin 2s infinite linear;
@@ -256,7 +367,7 @@ input:hover{
   background: white;
   color: black;
   transform: translateX(6px);
-  border-radius: 30px;
+  border-radius: 10px;
   cursor: pointer;
   transition: 1s !important;
 }
@@ -268,14 +379,12 @@ input:hover{
 #searchIcon{
   position: absolute;
   top: 40px;
-  margin-left: 30px;
-  
-  
+  margin-left: 30px; 
 }
 .mySearch{
   padding-left: 70px !important;
   background:#fff;
-  width: 60%;
+  width: 90%;
   border: var(--green-color) solid 1px !important;
   margin-top: 20px;
 }
@@ -291,13 +400,267 @@ input:hover{
   margin-left: 25px;
 }
 .myMonth{
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .dueDate{
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
   height: 30px;
-  margin-left: 20px;
+  margin-left: 10px;
   border-bottom: solid 1px rgb(236, 236, 236);
+}
+.items1, .items2, .items3, .items4{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.items1 i{
+  border-radius: 60px;
+  background-color: #32A7E2;
+  color: white;
+  padding: 1em;
+  margin-right: 10px;
+}
+.items2 i{
+  border-radius: 60px;
+  background-color: #B548C6;
+  color: white;
+  padding: 1em;
+  margin-right: 10px;
+}
+.items3 i{
+  border-radius: 60px;
+  background-color:#FF8700;
+  color: white;
+  padding: 1em;
+  margin-right: 10px;
+}
+.items4 i{
+  border-radius: 60px;
+  background-color: 
+  #32A7E2;
+  color: white;
+  padding: 1em;
+  margin-right: 10px;
+}
+.items_1 span{
+  width: 100% !important;
+  display: flex;
+}
+.first-item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100% !important;
+}
+span{
+  width: 100% !important;
+}
+
+/* Styling the progress bars */
+.progress{
+  height: 15px;
+  background: rgb(241, 241, 241);
+  border-radius: 20px;
+  border: solid 1px rgb(235, 235, 235);
+  box-shadow: 0 2px 2px #cdf8d8;
+  margin-bottom: 10px;
+  overflow: visible;
+  position: relative;
+}
+.progress .progress-bar{
+  border-radius: 20px;
+  /* border: 1px solid #000; */
+  animation: animate-positive 2s ;
+}
+.progress .progress-positive{
+  width: 65px;
+  height:45px;
+  line-height: 25px;
+  background: rgb(228, 228, 228);
+  font-size: 15px;
+  color: #fff;
+  border-radius: 0 0 15px 15px;
+  border: solid 1px rgb(168, 165, 165);
+  border-top: none;
+  box-shadow: 0 2px 2px rgb(134, 243, 134);
+  position: absolute;
+  bottom: -25px;
+  right: 60px;
+
+}
+@-webkit-keyframes animate-positive{
+  0%{
+      width: 0;
+  }
+}
+@keyframes animate-positive{
+  0%{
+      width: 0;
+  }
+}
+.expenditure{
+  background: #F9FAFC;
+  color: black;
+  position: relative;
+  right: 40px;
+  padding-top: 2em;
+  line-height: 15px; 
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 92vh;
+
+
+}
+.tip-container{
+  background: #EDF0F6;
+  color: black;
+}
+.tip{
+  color: white;
+  background: black;
+  border-radius: 0;
+  padding: 0.5em !important;
+  text-align: center;
+}
+#myText{
+  position: relative;
+  right: 50px;
+}
+#myText .imgThumb{
+  width: 80px;
+  display: inline-block;
+  position: relative;
+}
+.buttonPay{
+  color: white;
+  background: rgb(248, 73, 73);
+}
+#myText .imgThumb span{
+  display: none;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: -40px;
+}
+#myText .imgThumb:hover span{
+  display: block;
+  transition: all .4s ease-in;
+}
+.dropdown-toggle[aria-expanded="true"]:after {
+  transform: rotate(180deg); 
+  transition: .8s all ease-in;
+  color:white;
+  }
+  /*for animation*/ 
+  .dropdown-toggle:after { 
+  transition: 0.7s; 
+  color: white;
+  }
+  .dropdown-toggle{
+      font-size: 20px !important;
+  }
+.nav-item{
+  list-style: none;
+}
+.dropdown-menu{
+  margin: 10px;
+  border: var(--green-color) solid 1px !important;
+}
+.dropdown-toggle{
+  color:white;
+  outline: none !important;
+  border: none;
+
+}
+/*******Sign In Designs ********/
+.signIn{
+  background: #fbfdff;
+  padding: 2em;
+  border-radius: 20px;
+}
+.signIn input{
+  max-width: 600px;
+}
+.signUpCon{
+  background: black;
+  margin: 0 !important;
+  padding: 2em;
+  height: 50vh;
+  text-align: center;
+}
+.signLogo{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+/* Eyes design */
+#eyes{
+  position:absolute;
+  margin-top: -40px;
+  margin-left: -60px;
+  color: grey;
+  font-size: 18px;
+}
+#eyes:hover{
+  cursor: pointer;
+}
+#togglePassword:hover{
+  cursor: pointer;
+  color: grey;
+}
+/*****Mono Api******/
+.mono-api{
+  background: #ffffff;
+  color: white;
+  height: 70vh;
+  overflow-y: auto;
+  box-shadow: 2px 3px 4px 3px #EDF0F6;
+  border-radius: 20px;
+}
+.imgRight{
+  display: flex;
+  flex-direction: row;
+  width: 100% !important;
+}
+.notificationBar{
+  position: absolute;
+  right: 70px;
+  top: 100px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.notificationBar i:hover{
+  cursor: pointer;
+}
+.notify{
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 10px;
+  color: white;
+  background: var(--green-color);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.notificationBar .notify:hover{
+  color: black;
+  background-color: rgb(167, 247, 167);
+}
+.notify:hover{
+  color: black;
+  background-color: rgb(167, 247, 167);
+}
+.summary{
+  border-bottom: 1px solid rgb(201, 201, 201);
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
 }

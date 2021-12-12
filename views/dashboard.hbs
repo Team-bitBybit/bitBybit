@@ -6,9 +6,7 @@
     <div class="col-md-2 left-content">
       <div class="col-md-12 header">
         <!-- <div><img src="/public/images/logo2.png"></div> -->
-        <div>
-          <h2>bitBybit</h2>
-        </div>
+        <div><h2>bitBybit</h2></div>
       </div>
       <div class="col-md-12">
         <img class="img" src="/public/images/samantha.png" alt="myPics" /><br
@@ -21,7 +19,8 @@
       <div class="col-md-12 dashboard">
         <h5><strong>Dashboard</strong></h5>
         <ul>
-          <li><i class="fas fa-wallet"></i>&nbsp; Payments</li>
+          <li><i class="fas fa-wallet"></i>&nbsp; Payments
+            <span class="numNotify">4</span></li>
           <li><i class="fas fa-share"></i>&nbsp; Summary</li>
           <li><i class="fas fa-user"></i>&nbsp; Profile</li>
           <li><i id="roller" class="fas fa-cog"></i>&nbsp; Settings</li>
@@ -29,8 +28,14 @@
       </div>
     </div>
     <div class="col-lg-6 col-lg-8 inner-dash text-center">
-      <div class="col-md-9 text-left">
+      <div class="col-md-12 text-left">
         <div class="search-bar text-center">
+          <div class="notificationBar text-center">
+            <i style="color: black; cursor: pointer;" class="fas fa-bell"></i>
+            <div class="notify">
+              4
+            </div>
+          </div>
           <i id="searchIcon" class="fas fa-search"></i>
           <input class="mySearch" type="search" placeholder="Search" /><br />
           <div class="row myMonth">
@@ -41,6 +46,7 @@
               </div>
             </div>
             <div class="col-md-6">
+              {{#if user.monoId}}
               <div class="dropdown">
                 <button
                   class="dropdown-toggle"
@@ -50,34 +56,41 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Create Payments
+                  <small style="color: white;"><b>Create Payments</b></small>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">Pay Someone</a>
-                  <a class="dropdown-item" href="#">Receieve Payment</a>
+                  <a class="dropdown-item" href="#">Receive Payment</a>
                 </div>
               </div>
+              {{ else }}
+              <button id="launch-btn" class="btn btn-primary py-2 px-3">Link your account</button>
+              {{/if}}
             </div>
           </div>
           <div class="col-md-12 text-center date">
             <img src="/public/images/dashboard  bar.png" width="80%" />
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12 inner-dash-contents">
             <div class="col-md-12 text-center dueDate">
-              <p>Due date</p>
+              <p><b>Due date</b></p>
               <i class="fas fa-ellipsis-h" style="color: grey;"></i>
             </div>
             <div class="col-md-12 first-item">
               <div class="items1">
                 <i class="fas fa-store"></i>
                 <div class="items_1">
-                  <h6>Adupe's Kitchen</h6>
+                  <span><b>Adupe's Kitchen</b></span>
                   <span>Five course meal</span>
                 </div>
               </div>
               <div id="myText">
                 <p class="imgThumb">#1500
-                  <span><input type="button" value="Make Payment" /></span>
+                  <span><a href="#"><input
+                        class="buttonPay"
+                        type="button"
+                        value="Pay Now"
+                      /></a></span>
                 </p>
               </div>
             </div>
@@ -85,13 +98,17 @@
               <div class="items2">
                 <i class="fas fa-bus"></i>
                 <div class="items_1">
-                  <h6>Adeola Tinu</h6>
+                  <span><b>Adeola Tinu</b></span>
                   <span>Peruvian hair</span>
                 </div>
               </div>
               <div id="myText">
                 <p class="imgThumb">#1500
-                  <span><input type="button" value="Make Payment" /></span>
+                  <span><a href="#"><input
+                        class="buttonPay"
+                        type="button"
+                        value="Pay Now"
+                      /></a></span>
                 </p>
               </div>
             </div>
@@ -99,43 +116,53 @@
               <div class="items3">
                 <i class="fas fa-home"></i>
                 <div class="items_1">
-                  <h6>Elumelu R.estate</h6>
+                  <span><b>Elumelu R.estate</b></span>
                   <span>Initial deposit</span>
                 </div>
               </div>
               <div id="myText">
                 <p class="imgThumb">#1500
-                  <span><input type="button" value="Make Payment" /></span>
+                  <span><a href="#"><input
+                        class="buttonPay"
+                        type="button"
+                        value="Pay Now"
+                      /></a></span>
                 </p>
               </div>
             </div>
             <div class="col-md-12 text-center dueDate">
-              <p>Due date</p>
+              <p><b>Due Monday, 23 March</b></p>
               <i class="fas fa-ellipsis-h" style="color: grey;"></i>
             </div>
             <div class="col-md-12 first-item">
               <div class="items4">
-                <i class="fas fa-home"></i>
+                <i class="fas fa-sun"></i>
                 <div class="items_1">
-                  <h6>Adupe's Kitchen</h6>
-                  <p>Five course meal</p>
+                  <span><b>Adupe's Kitchen</b></span>
+                  <span>Five course meal</span>
                 </div>
               </div>
               <div id="myText">
                 <p class="imgThumb">#1500
-                  <span><input type="button" value="Make Payment" /></span>
+                  <span><a href="#"><input
+                        class="buttonPay"
+                        type="button"
+                        value="Pay Now"
+                      /></a></span>
                 </p>
-              </div>
+              </div><br /><br />
             </div>
           </div>
         </div>
       </div>
-
     </div>
     <div class="col-md-2 expenditure">
       <h5><b>Expenditure</b></h5>
       <div class="col-md-12 progress-title">
-        <p><b>Electronics</b></p>
+        <div class="d-flex">
+          <p>Electronics</p>
+          <p>#827,400</p>
+        </div>
         <div class="progress">
           <div class="progress-bar" style="width: 50%; background: #8AC926;">
             <div class="progress-value">50%</div>
@@ -174,19 +201,76 @@
           </div>
         </div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12 text-center">
         <div class="imgRight text-center">
-          <img src="/public/images/boxes.png" />
-          <img src="/public/images/plant.png" />
+          <img
+            class="text-center"
+            src="/public/images/boxes.png"
+          />&nbsp;&nbsp;&nbsp;&nbsp;
+          <img class="text-center" src="/public/images/plant.png" />
         </div>
         <div class="col-md-12 tips-container">
           <p class="tip-text">
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim.<br /><br />
             <button class="tip">View Tips</button>
+
           </p>
         </div>
       </div>
     </div>
   </div>
 </main>
+
+{{#contentFor "scripts"}}
+<script src="https://connect.withmono.com/connect.js"></script>
+<script type="application/javascript">
+    var sendToDashboard = async function(data) {
+      try {
+        const resp = await fetch('/dashboard', {
+          method: 'POST',
+          body: JSON.stringify({code: data.code, id: "{{user.id}}"}),
+          headers = {'Content-Type': 'application/json'}
+        })
+        const val = await resp.json()
+        console.log(val)
+        if (val) {
+          location.assign('/accounts/dashboard')
+        }
+      }catch(err) {
+        console.log(err)
+      }
+    }
+    const copyToClipboard = text => {
+      const elm = document.createElement('textarea');
+      elm.value = text;
+      document.body.appendChild(elm);
+      elm.select();
+      document.execCommand('copy');
+      document.body.removeChild(elm);
+    };
+    var connect;
+    var config = {
+      key: "{{ monoPublicKey}}",
+      onSuccess: function (response) {
+        copyToClipboard(response.code);
+        console.log(JSON.stringify(response));
+        sendToDashboard(response)
+        /**
+          response : { "code": "code_xyz" }
+          you can send this code back to your server to get this
+          authenticated account and start making requests.
+          */
+      },
+      onClose: function () {
+        console.log('user closed the widget.')
+      }
+    };
+    connect = new Connect(config);
+    connect.setup();
+    var launch = document.getElementById('launch-btn');
+    launch.onclick = function (e) {
+      connect.open();
+    };
+</script>
+{{/contentFor}}
