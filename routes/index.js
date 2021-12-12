@@ -5,7 +5,7 @@ const { home, User } = require("../controllers");
 const uc = new User();
 
 router.get("/", home);
-router.get("/accounts/dashboard", uc.dashboard);
+router.all("/accounts/dashboard", uc.dashboard);
 router.all("/accounts/register", uc.register);
 router.get("/accounts/login", uc.login);
 router.post(

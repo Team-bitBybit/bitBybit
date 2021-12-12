@@ -43,6 +43,7 @@ class UserController {
               'mono-sec-key': process.env['MONO_SECRET_KEY']
             }
           })
+          console.log(resp)
           user.monoId =  resp._id
           user.monoCode = code
           user.monoStatus = false
@@ -63,7 +64,7 @@ class UserController {
           'mono-sec-key': process.env['MONO_SECRET_KEY']
         }
       })
-      
+
       res.locals.dashboard = resp.data
     }
 
