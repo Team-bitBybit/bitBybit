@@ -58,20 +58,35 @@ class UserController {
     }
 
     if (user.monoId) {
-      const url = `https://api.withmono.com/accounts/${user.monoId}/identity`
-      const resp = await axios.get(url, {
-        headers: {
-          'Content-Type': 'application/json',
-          'mono-sec-key': process.env['MONO_SECRET_KEY']
-        }
-      })
-
-      res.locals.dashboard = resp.data
-      console.log(resp.data)
+      const apiURL = `https://api.withmono.com/accounts/${user.monoId}/`
+      const responses = await Promise.all([
+        getRequest(`${apiURL}identity`),
+        getRequest(`${apiURL}statement`),
+        getRequest(`${apiURL}income`),
+      ])
+      
+      res.locals.dashboard = responses[0].data
+      res.locals.statement = responses[1].data
+      const score = calculateUserScore(responses[2].data)
+      res.locals.score = score.toFixed(2)
     }
 
-    return res.render("dashboard.hbs", {monoPublicKey, id: user.id});
+    return res.render("dashboard.hbs", {monoPublicKey, date: new Date().toDateString()});
   }
+}
+
+// stub out credit score algorithm
+function calculateUserScore(userData) {
+  return (userData.amount / 1000000)
+}
+
+async function getRequest(url) {
+  return await axios.get(url, {
+    headers: {
+      'Content-Type': 'application/json',
+      'mono-sec-key': process.env['MONO_SECRET_KEY']
+    }
+  })
 }
 
 module.exports = UserController;

@@ -41,17 +41,18 @@
           <div class="row myMonth">
             <div class="col-md-6">
               <div>
-                <h4>This month</h4><br />
-                <p class="date">01-25 December, 2021</p>
+                <h5>This month</h5>
+                <p class="date">{{ date }}</p>
+                {{#if user.monoId}}
+                <p class="font-weight-bold text-success">
+                Account linked<br>
+                <span>BVN: {{ dashboard.bvn }}</span><br>
+                <span>Score: {{ score }}%</span>
+              </p>{{/if }}
               </div>
             </div>
             <div class="col-md-6">
               {{#if user.monoId}}
-              <p class="p-3 font-weight-bold text-success">
-                Account linked<br>
-                <span>BVN: {{ dashboard.bvn }}</span>
-              </p>
-
               <div class="dropdown">
                 <button
                   class="dropdown-toggle"
@@ -271,11 +272,17 @@
         console.log('user closed the widget.')
       }
     };
-    connect = new Connect(config);
-    connect.setup();
-    var launch = document.getElementById('launch-btn');
-    launch.onclick = function (e) {
-      connect.open();
-    };
+
+    function setupConnect() {
+      connect = new Connect(config);
+      connect.setup();
+      var launch = document.getElementById('launch-btn');
+      if (!launch) { return }
+      launch.onclick = function (e) {
+        connect.open();
+      };
+    }
+
+    setupConnect()
 </script>
 {{/contentFor}}
