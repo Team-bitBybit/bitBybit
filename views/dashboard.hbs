@@ -44,10 +44,10 @@
                 <h5>This month</h5>
                 <p class="date">{{ date }}</p>
                 {{#if user.monoId}}
-                <p class="font-weight-bold text-success">
+                <p class="font-weight-bold">
                 Account linked<br>
-                <span>BVN: {{ dashboard.bvn }}</span><br>
-                <span>Score: {{ score }}%</span>
+                <span>BVN: {{ identity.bvn }}</span><br>
+                <span>Monthly Income: NGN {{ income.amount }}</span>
               </p>{{/if }}
               </div>
             </div>
