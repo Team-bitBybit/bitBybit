@@ -1,11 +1,12 @@
 const router = require("express").Router();
 const passport = require("../config/passport");
 const { home, User } = require("../controllers");
+const { mustAuth } = require('../middleware/auth')
 
 const uc = new User();
 
 router.get("/", home);
-router.all("/accounts/dashboard", uc.dashboard);
+router.all("/accounts/dashboard", mustAuth, uc.dashboard);
 router.all("/accounts/register", uc.register);
 router.get("/accounts/login", uc.login);
 router.post(

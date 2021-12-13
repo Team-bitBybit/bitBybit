@@ -35,6 +35,7 @@ class UserController {
     if (req.method === "POST"){
       const {code, id} = req.body
       let url = 'https://api.withmono.com/account/auth'
+
       if (code) {
         try {
           const resp = await axios.post(url, JSON.stringify({code}), {
@@ -44,7 +45,7 @@ class UserController {
             }
           })
           console.log(resp)
-          user.monoId =  resp._id
+          user.monoId =  resp.data.id
           user.monoCode = code
           user.monoStatus = false
           await user.save()
@@ -66,9 +67,10 @@ class UserController {
       })
 
       res.locals.dashboard = resp.data
+      console.log(resp.data)
     }
 
-    return res.render("dashboard.hbs", {monoPublicKey});
+    return res.render("dashboard.hbs", {monoPublicKey, id: user.id});
   }
 }
 
