@@ -267,6 +267,9 @@ nav .logo{
   .inner-dash-contents{
       overflow-x: auto;
   }
+  .credit{
+      margin-left:0 !important;
+  }
 }
 h1{
   margin: 5px;
@@ -363,6 +366,7 @@ input:hover{
   margin: 5px;
   padding: 0.2em !important;
 }
+
 .dashboard ul li:hover{
   background: white;
   color: black;
@@ -397,7 +401,11 @@ input:hover{
   margin-top: -10px;
 }
 .date{
-  margin-left: 25px;
+  margin-left: -25px;
+}
+.dateImg{
+  width: 100%;
+  height: 300px;
 }
 .myMonth{
   margin-top: 10px;
@@ -410,6 +418,14 @@ input:hover{
   margin-left: 10px;
   border-bottom: solid 1px rgb(236, 236, 236);
 }
+.dueDate2{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  height: 30px;
+  border-bottom: solid 1px rgb(236, 236, 236);
+}
+
 .items1, .items2, .items3, .items4{
   display: flex;
   justify-content: space-evenly;
@@ -626,7 +642,9 @@ span{
   display: flex;
   flex-direction: row;
   width: 100% !important;
+  padding-top: 20px;
 }
+
 .notificationBar{
   position: absolute;
   right: 70px;
@@ -659,8 +677,108 @@ span{
   background-color: rgb(167, 247, 167);
 }
 .summary{
-  border-bottom: 1px solid rgb(201, 201, 201);
   display: flex;
   flex-direction:row;
   justify-content: space-between;
+}
+.summarize{
+  border-bottom: 1px solid rgb(226, 222, 222);
+  margin-bottom: 20px;
+}
+.tips-container{
+  padding-top: 30px;
+}
+.chart{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.public-image{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  /* margin-left: 60px; */
+  padding-right: 120px;
+}
+
+.public-image img{
+  border-radius: 20px;
+  margin-right: 40px;
+}
+.credit{
+  margin-left: -65px;
+}
+.samanthPay{
+  padding: 0.5em;
+  width: 80px;
+  cursor: pointer;
+  background: var(--green-color);
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+}
+.paySamanth{
+  padding:4em;
+}
+.percent{
+  display: flex;
+  flex-direction: row;
+}
+.payBottom{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  padding: 1em;
+  box-shadow: 2px 3px 3px 4px #EDF0F6;
+}
+.payBottom2{
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 3px 3px 4px #EDF0F6;
+  padding: 1em;
+  margin-top: 30px;
+}
+.bottomPay{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em;
+  width: 100% !important;
+}
+.pay{
+  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+
+}
+.check{
+  padding: 2em;
+}
+#items_1{
+  padding-top: 15px;
+}
+.createPayment{
+  padding: 2em;
+  background: #fff;
+}
+.createPayment-row{
+  padding: 3em;
+}
+.pay-button{
+color: white;
+padding: 1em !important;
+text-align: center !important;
+
+}
+.buttonSpan{
+  justify-content: center;
+  text-align: center;
+}
+.lists{
+  padding: 2em;
+}
+.pad{
+  margin-top: 30px;
 }

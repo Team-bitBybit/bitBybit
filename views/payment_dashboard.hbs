@@ -1,0 +1,124 @@
+{{!< base }}
+{{#contentFor "title"}} Payment {{/contentFor}}
+
+<main class="col-md-12 dashboard-container">
+  <div class="row large-container">
+    <div class="col-md-2 left-content">
+      <div class="col-md-12 header">
+        <!-- <div><img src="/public/images/logo2.png"></div> -->
+        <div>
+          <h2>bitBybit</h2>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <img class="img" src="/public/images/samantha.png" alt="myPics" /><br /><br />
+        <span>
+          <h5><strong>Samantha</strong></h5>
+          <small>samantha@gmail.com</small>
+        </span>
+      </div>
+      <div class="col-md-12 dashboard">
+        <h5><strong>Dashboard</strong></h5>
+        <ul>
+          <li><i class="fas fa-wallet"></i>&nbsp; Payments
+            <span class="numNotify">4</span></li>
+          <li><i class="fas fa-share"></i>&nbsp; Summary</li>
+          <li><i class="fas fa-user"></i>&nbsp; Profile</li>
+          <li><i id="roller" class="fas fa-cog"></i>&nbsp; Settings</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-6 col-lg-6 inner-dash text-center">
+      <div class="row">
+        <div class="col-md-12 paySamanth text-left">
+          <h3>Create payment for Samantha</h3>
+          <form name="Form" method="post">
+            <p>What is the payment for?</p>
+            <input type="text" placeholder="Payment for birthday cake" /><br />
+            <p>What is the total amount?</p>
+            <input type="text" placeholder="#500,000" /><br />
+            <p>How much is the initial payment?</p>
+            <span class="percent">
+              <input type="text" placeholder="Percentage" width="20%" /><br />
+              <input type="text" placeholder="#50,000.00" width="100%" />
+            </span>
+            <p>How long in weeks should the payment last?</p>
+            <input type="text" placeholder="5" />
+            <p>How frequently should the payments last?</p>
+
+            <div class="col-md-12 text-center bottomPay">
+              <div class="payBottom">
+                <div class="check"><input type="checkbox" /></div>
+                <div class="items_1 d-block" id="items_1" style="width: 100%" ;>
+                  <span><b>Weekly</b></span>
+                  <span>Pay weekly for up to 5 weeks</span>
+                </div>
+                <div class="pad">
+                  <p>#1500
+                    <span style="color: rgb(175, 175, 175); width: 300px;">/ wk</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 text-center bottomPay">
+              <div class="payBottom2">
+                <div class="check"><input type="checkbox" /></div>
+                <div class="items_1 d-block" id="items_1" style="width: 100%;">
+                  <span><b>Monthly</b></span>
+                  <span>Pay monthly for up to 1 month</span>
+                </div>
+                <div class="pad">
+                  <p>#5500
+                    <span style="color: rgb(175, 175, 175); width: 300px;">/ m</span></p>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 expenditure">
+      <div class="col-md-12 lists">
+        <h5><b>Samantha's preference</b></h5>
+        <div class="col-md-12 text-left">
+          <ul>
+            <li>Greater than 20% initial payment.</li><br />
+            <li>Up to 5 month spread.</li><br />
+            <li>3% interest rate after end-of-life.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row createPayment-row">
+        <div class="col-md-12 createPayment">
+          <h5>Summary</h5><br />
+          <div class="summarize">
+            <div class="summary">
+              <div>
+                <p>Total Amount</p>
+                <p><b>#500,000.00</b></p>
+              </div>
+              <div>
+                <p>Initial Pay</p>
+                <p>20%</p>
+              </div>
+            </div>
+            <div class="summary d-block">
+              <div>
+                <p>Schedule</p>
+              </div>
+              <span>
+                <p><b>#1,500.00</b><span style="color: rgb(192, 192, 192);">/wk
+                    for up to 5weeks</span>
+                </p>
+              </span>
+            </div>
+          </div>
+          <p>First Payment</p>
+          <h3>#100,000.00</h3>
+          <span class="text-center buttonSpan"><button class="pay-button">CREATE
+              PAYMENT</button></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

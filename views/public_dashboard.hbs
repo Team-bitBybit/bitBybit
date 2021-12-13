@@ -1,0 +1,174 @@
+{{!< base }}
+
+{{#contentFor "title"}} Public Dashboard {{/contentFor}}
+
+<main class="col-md-12 dashboard-container">
+    <div class="row large-container">
+        <div class="col-md-2 left-content">
+            <div class="col-md-12 header">
+                <!-- <div><img src="/public/images/logo2.png"></div> -->
+                <div>
+                    <h2>bitBybit</h2>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <img class="img" src="/public/images/samantha.png" alt="myPics"><br><br>
+                <span>
+                    <h5><strong>Samantha</strong></h5>
+                    <small>samantha@gmail.com</small>
+                </span>
+            </div>
+            <div class="col-md-12 dashboard">
+                <h5><strong>Dashboard</strong></h5>
+                <ul>
+                    <li><i class="fas fa-wallet"></i>&nbsp; Payments <span class="numNotify">4</span></li>
+                    <li><i class="fas fa-share"></i>&nbsp; Summary</li>
+                    <li><i class="fas fa-user"></i>&nbsp; Profile</li>
+                    <li><i id="roller" class="fas fa-cog"></i>&nbsp; Settings</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-lg-8 inner-dash text-center">
+            <div class="col-md-12 text-left">
+                <i id="searchIcon" class="fas fa-search"></i>
+                <input class="mySearch" type="search" placeholder="Search"><br>
+                <div class="col-md-12 text-center date">
+                    <img class="dateImg" src="/public/images/profile cover image.svg">
+                </div><br><br>
+                <div class="row">
+                    <div class="col-md-12 public-image">
+                        <div class="col-md-6 d-flex">
+                            <img src="/public/images/samantha.png">
+                            <span>
+                                <h2>Samantha</h2>
+                                <p>@Sammyd</p>
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="samanthPay text-center">PAY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 inner-dash-contents">
+                    <div class="text-center dueDate2">
+                        <p><b>Samantha's Preferences</b></p>
+                        <!-- <i class="fas fa-ellipsis-h" style="color: grey;"></i> -->
+                    </div>
+                    <div class="row credits">
+                        <div class="col-md-6 credit text-left">
+                            <div class="items1">
+                                <ul class="text-left">
+                                    <li>Credit score above 70%</li>
+                                    <li>Up to 5 months spread</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 credit text-left">
+                            <div class="items1">
+                                <ul class="text-left">
+                                    <li>20% down payment</li>
+                                    <li>3% interest after end-of-life</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center dueDate2">
+                            <p><b>Samantha's Businesses</b></p>
+                            <!-- <i class="fas fa-ellipsis-h" style="color: grey;"></i> -->
+                        </div>
+                        <div class="col-md-12 first-item" id="first-items">
+                            <div class="items4">
+                                <i class="fas fa-store"></i>
+                                <div class="items_1">
+                                    <span><b>Sam's Salon</b></span>
+                                    <span>Lekki &nbsp;&nbsp;<li>Lagos</li></span>
+                                </div>
+                            </div>
+                            <div id="myText">
+                                <!-- <p class="imgThumb"><i class="fas fa-star"></i> -->
+                                <!-- <span><a href="#"><input class="buttonPay" type="button" value="Pay"></a></span> -->
+                                </p>
+                            </div><br><br>
+                        </div>
+                        <div class="col-md-12 first-item" id="first-items">
+                            <div class="items4">
+                                <i class="fas fa-bus"></i>
+                                <div class="items_1">
+                                    <span><b>Accounts 'r' us</b></span>
+                                    <span>Abeokuta &nbsp;&nbsp;<li>Ogun</li></span>
+                                </div>
+                            </div>
+                            <div id="myText">
+                                <p class="imgThumb"><i class="far fa-star"></i>
+                                    <span><a href="#"><input class="buttonPay" type="button" value="Pay"></a></span>
+                                </p>
+                            </div><br><br>
+                        </div>
+                        <div class="col-md-12 first-item" id="first-items">
+                            <div class="items4">
+                                <i class="fas fa-home"></i>
+                                <div class="items_1">
+                                    <span><b>Get Real Estate</b></span>
+                                    <span>Osogbo &nbsp;&nbsp;<li>Osun</li></span>
+                                </div>
+                            </div>
+                            <div id="myText">
+                                <p class="imgThumb"><i class="far fa-star"></i>
+                                    <span><a href="/payments"><input class="buttonPay" type="button" value="Pay"></a></span>
+                                </p>
+                            </div><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 expenditure">
+            <p><b>Samantha's Chart</b></p>
+            <div class="col-md-12 progress-title">
+                <div class="chart">
+                    <p><b>Completed</b></p>
+                    <p>19</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 50%; background: #8AC926;">
+                        <!-- <div class="progress-value">90%</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 progress-title">
+                <div class="chart">
+                    <p><b>Timeliness</b></p>
+                    <p>7</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 60%; background: #8AC926;">
+                        <!-- <div class="progress-value">60%</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 progress-title">
+                <div class="chart">
+                    <p><b>Reviews</b></p>
+                    <small>Highly positive</small>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 95%; background: #8AC926;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="imgRight text-center" id="imgRight">
+                    <img class="text-center" src="/public/images/boxes.png">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img class="text-center" src="/public/images/plant.png">
+                </div>
+                <div class="col-md-12 tips-container">
+                    <p class="tip-text">
+                        eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim.<br><br>
+                        <button class="tip">View Tips</button>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

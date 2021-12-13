@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const passport = require("../config/passport");
-const { home, User } = require("../controllers");
+const { home, User, payment } = require("../controllers");
 const { mustAuth } = require('../middleware/auth')
 
 const uc = new User();
@@ -17,5 +17,11 @@ router.post(
   uc.login
 );
 router.all("/accounts/logout", uc.logout);
+router.get('/payments', (req, res) => {
+  res.render('payment_dashboard.hbs')
+});
+router.get('/dashboard', (req, res) => {
+  res.render("public_dashboard.hbs")
+})
 
 module.exports = router;
